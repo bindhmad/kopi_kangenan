@@ -8,6 +8,7 @@ import 'order_status_screen.dart';
 import 'outlet_list_screen.dart';
 import 'product_detail_screen.dart';
 import 'profile_screen.dart';
+import 'vip_screen.dart';
 
 /// Beranda Screen (supports both Logged In & Guest states)
 /// Strictly matching Stitch screens:
@@ -50,11 +51,16 @@ class _HomeScreenState extends State<HomeScreen> {
         MaterialPageRoute(builder: (context) => const MenuScreen()),
       );
     } else if (index == 2) {
+      // Navigate to VIP Screen (Stitch Design)
+      Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => VipScreen(userName: widget.userName)),
+      );
+    } else if (index == 3) {
       // Navigate to Status Pesanan
       Navigator.of(context).push(
         MaterialPageRoute(builder: (context) => const OrderStatusScreen()),
       );
-    } else if (index == 3) {
+    } else if (index == 4) {
       // Navigate to Profil Saya
       Navigator.of(context).push(
         MaterialPageRoute(builder: (context) => const ProfileScreen()),
@@ -159,6 +165,10 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.local_cafe_outlined),
               label: 'Menu',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.stars_rounded),
+              label: 'VIP',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.receipt_long_outlined),
@@ -350,63 +360,73 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           const SizedBox(height: 12),
 
-          // Integrated Loyalty Strip
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [AppColors.primaryFixed, AppColors.surfaceContainer],
-              ),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Icon(
-                      Icons.verified_rounded,
-                      size: 16,
-                      color: AppColors.secondary,
-                    ),
-                    SizedBox(width: 6),
-                    Text(
-                      'Level: Silver',
-                      style: TextStyle(
-                        fontFamily: _fontFamily,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
-                        color: AppColors.onSurface,
-                      ),
-                    ),
-                    SizedBox(width: 4),
-                    Icon(
-                      Icons.star_rounded,
-                      size: 14,
-                      color: AppColors.primary,
-                    ),
-                  ],
+          // Integrated Loyalty Strip with Navigation to VIP
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => VipScreen(userName: widget.userName)),
+              );
+            },
+            borderRadius: BorderRadius.circular(10),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [AppColors.primaryFixed, AppColors.surfaceContainer],
                 ),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.toll_rounded,
-                      size: 14,
-                      color: AppColors.primary,
-                    ),
-                    SizedBox(width: 4),
-                    Text(
-                      '0 pts',
-                      style: TextStyle(
-                        fontFamily: _fontFamily,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w700,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.verified_rounded,
+                        size: 16,
+                        color: AppColors.secondary,
+                      ),
+                      SizedBox(width: 6),
+                      Text(
+                        'Level: Silver',
+                        style: TextStyle(
+                          fontFamily: _fontFamily,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.onSurface,
+                        ),
+                      ),
+                      SizedBox(width: 4),
+                      Icon(
+                        Icons.star_rounded,
+                        size: 14,
                         color: AppColors.primary,
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.toll_rounded,
+                        size: 14,
+                        color: AppColors.primary,
+                      ),
+                      SizedBox(width: 4),
+                      Text(
+                        '0 pts',
+                        style: TextStyle(
+                          fontFamily: _fontFamily,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                          color: AppColors.primary,
+                        ),
+                      ),
+                      SizedBox(width: 4),
+                      Icon(Icons.chevron_right_rounded, size: 16, color: AppColors.secondary),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],

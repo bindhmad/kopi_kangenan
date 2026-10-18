@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../theme/app_colors.dart';
 import 'login_screen.dart';
+import 'vip_screen.dart';
 
 /// Profil Screen (Saya)
 /// Strictly fulfills PRD requirements:
@@ -593,7 +594,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
             title: 'Voucher',
             badge: '4 Kupon',
             color: const Color(0xFFD32F2F),
-            onTap: () => ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Membuka Voucher Saya...'))),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => VipScreen(initialTab: 0, userName: _userName),
+                ),
+              );
+            },
           ),
           const SizedBox(width: 8),
           _buildShortcutCard(
@@ -669,68 +676,78 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   Widget _buildVipMembershipBanner() {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16),
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF2C2C2C), Color(0xFF1A1A1A)],
+    return InkWell(
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => VipScreen(initialTab: 2, userName: _userName),
+          ),
+        );
+      },
+      borderRadius: BorderRadius.circular(14),
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF2C2C2C), Color(0xFF1A1A1A)],
+          ),
+          borderRadius: BorderRadius.circular(14),
         ),
-        borderRadius: BorderRadius.circular(14),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  Icon(Icons.workspace_premium_rounded, color: Color(0xFFFFD54F), size: 20),
-                  SizedBox(width: 8),
-                  Text(
-                    'Kopi Kangenan VIP Club',
-                    style: TextStyle(
-                      fontFamily: _fontFamily,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    Icon(Icons.workspace_premium_rounded, color: Color(0xFFFFD54F), size: 20),
+                    SizedBox(width: 8),
+                    Text(
+                      'Kopi Kangenan VIP Club',
+                      style: TextStyle(
+                        fontFamily: _fontFamily,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              Text(
-                'Lihat Keuntungan >',
-                style: TextStyle(
-                  fontFamily: _fontFamily,
-                  fontSize: 11,
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xFFFFD54F),
+                  ],
                 ),
+                Text(
+                  'Lihat Keuntungan >',
+                  style: TextStyle(
+                    fontFamily: _fontFamily,
+                    fontSize: 11,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFFFFD54F),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Belanja Rp125.000 lagi untuk naik ke Gold Member & nikmati cashback 5% + voucher ulang tahun!',
+              style: TextStyle(
+                fontFamily: _fontFamily,
+                fontSize: 11,
+                color: Color(0xFFD1D1D1),
+                height: 1.3,
               ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          const Text(
-            'Belanja Rp125.000 lagi untuk naik ke Gold Member & nikmati cashback 5% + voucher ulang tahun!',
-            style: TextStyle(
-              fontFamily: _fontFamily,
-              fontSize: 11,
-              color: Color(0xFFD1D1D1),
-              height: 1.3,
             ),
-          ),
-          const SizedBox(height: 8),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(999),
-            child: const LinearProgressIndicator(
-              value: 0.65,
-              backgroundColor: Color(0xFF4A4A4A),
-              valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFFD54F)),
-              minHeight: 6,
+            const SizedBox(height: 8),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(999),
+              child: const LinearProgressIndicator(
+                value: 0.65,
+                backgroundColor: Color(0xFF4A4A4A),
+                valueColor: AlwaysStoppedAnimation<Color>(Color(0xFFFFD54F)),
+                minHeight: 6,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

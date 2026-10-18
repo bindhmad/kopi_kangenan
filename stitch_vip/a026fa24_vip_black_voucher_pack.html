@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container-high":"#eae8e7","outline-variant":"#e4beba","inverse-surface":"#303030","background":"#fbf9f8","surface":"#fbf9f8","outline":"#8f706c","tertiary-container":"#676868","on-primary":"#ffffff","on-surface":"#1b1c1c","primary-container":"#c62828","on-tertiary-fixed-variant":"#454747","error-container":"#ffdad6","surface-container-lowest":"#ffffff","surface-container":"#efeded","on-error-container":"#93000a","tertiary-fixed":"#e2e2e2","on-primary-container":"#ffe0dd","on-background":"#1b1c1c","on-secondary":"#ffffff","on-secondary-fixed":"#1c1b1b","tertiary-fixed-dim":"#c6c6c6","surface-container-highest":"#e4e2e2","on-tertiary":"#ffffff","on-surface-variant":"#5b403d","on-primary-fixed":"#410003","on-primary-fixed-variant":"#93000e","secondary-container":"#e2dfde","on-error":"#ffffff","surface-tint":"#b91d20","on-secondary-container":"#636262","surface-bright":"#fbf9f8","on-secondary-fixed-variant":"#474746","on-tertiary-container":"#e8e7e7","on-tertiary-fixed":"#1a1c1c","secondary":"#5f5e5e","surface-dim":"#dbd9d9","error":"#ba1a1a","secondary-fixed":"#e5e2e1","surface-variant":"#e4e2e2","primary-fixed-dim":"#ffb4ac","inverse-primary":"#ffb4ac","tertiary":"#4e5050","primary-fixed":"#ffdad6","surface-container-low":"#f5f3f3","inverse-on-surface":"#f2f0f0","primary":"#a20513","secondary-fixed-dim":"#c8c6c5"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xl":"2rem","margin":"1rem","space-xs":"0.25rem","space-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","gutter":"1rem"},"fontFamily":{"headline-sm":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"]},"fontSize":{"headline-sm":["16px",{"lineHeight":"24px","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","fontWeight":"600"}],"headline-md":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["32px",{"lineHeight":"40px","fontWeight":"700"}],"headline-lg":["24px",{"lineHeight":"32px","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"label-lg":["14px",{"lineHeight":"20px","fontWeight":"600"}]}}}};</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior-y:none;font-family:'Plus Jakarta Sans',sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center"><span class="material-symbols-outlined text-primary text-[22px]">local_cafe</span></div><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">Vip</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Bantuan dan Informasi" class="w-11 h-11 flex items-center justify-center rounded-full text-secondary hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">help_outline</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface px-margin min-h-screen"><div class="flex flex-col w-full pb-6">
+<!-- Membership Card Section (VIP Black Tier) -->
+<section class="relative w-full pt-2">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a1c1c] via-[#2a2929] to-[#121212] p-5 shadow-xl text-on-primary">
+<!-- Ambient Shimmer / Glow Overlay -->
+<div class="absolute -right-10 -top-10 w-44 h-44 rounded-full bg-gradient-to-br from-[#ffd54f]/15 to-transparent blur-2xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-12 w-36 h-36 rounded-full bg-primary/20 blur-xl pointer-events-none"></div>
+<!-- Card Top Content -->
+<div class="flex items-start justify-between relative z-10">
+<div class="flex-1 pr-3">
+<div class="flex items-center gap-2">
+<span class="font-display-lg text-display-lg tracking-wider font-extrabold text-white leading-none">BLACK</span>
+<span class="inline-flex items-center gap-1 bg-[#333333] text-surface-bright font-label-sm text-label-sm px-2.5 py-0.5 rounded-full shadow-inner">
+<span class="material-symbols-outlined text-[12px] text-[#ffd54f]">lock</span>
+              Locked
+            </span>
+</div>
+<p class="font-label-lg text-label-lg text-tertiary-fixed-dim mt-1.5 flex items-center gap-1.5">
+<span>Hai, Davit Hengky</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-[#ffd54f]"></span>
+</p>
+</div>
+<!-- Luxury Lock Emblem Icon -->
+<div class="relative flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-tr from-[#1a1c1c] to-[#3a3939] shadow-md shrink-0">
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#ffd54f]/40 to-transparent p-[1.5px] pointer-events-none"></div>
+<span class="material-symbols-outlined text-[#ffd54f] text-[30px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-[#1b1c1c] flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-[#ffd54f] text-[14px]">stars</span>
+</div>
+</div>
+</div>
+<!-- Target Spending & Progress -->
+<div class="relative z-10 mt-4">
+<div class="flex items-baseline justify-between mb-1.5">
+<span class="font-headline-sm text-headline-sm text-white font-bold tracking-tight">Target Belanja: Rp2.000.000</span>
+<span class="font-label-md text-label-md text-[#ffd54f] font-semibold">42%</span>
+</div>
+<!-- Custom Progress Track -->
+<div class="w-full bg-[#3d3c3c] h-2.5 rounded-full overflow-hidden p-0.5">
+<div class="bg-gradient-to-r from-[#ffd54f] to-[#ffb300] h-full rounded-full transition-all duration-700 w-[42%] shadow-[0_0_8px_rgba(255,213,79,0.5)]"></div>
+</div>
+<p class="font-body-sm text-body-sm text-neutral-300 mt-2.5 leading-snug">
+          Kumpulkan total belanja Rp2.000.000 untuk menikmati status Kangenan Black VIP
+        </p>
+</div>
+<!-- Card Footer Subtle Watermark -->
+<div class="absolute right-4 bottom-3 opacity-10 pointer-events-none flex items-center gap-1 text-white font-display-lg text-display-lg italic select-none">
+        KANGENAN
+      </div>
+</div>
+<!-- Carousel Pagination Dots -->
+<div class="flex justify-center items-center gap-2 mt-3.5">
+<div class="w-2 h-2 rounded-full bg-secondary-fixed-dim/60 transition-all"></div>
+<div class="w-2 h-2 rounded-full bg-secondary-fixed-dim/60 transition-all"></div>
+<div class="w-6 h-2 rounded-full bg-primary transition-all"></div>
+</div>
+</section>
+<!-- Segmented Controls / Tabs -->
+<section class="mt-4">
+<div class="bg-surface-container-low p-1 rounded-xl flex items-center justify-between">
+<button class="flex-1 py-2 px-3 text-center rounded-lg font-label-lg text-label-lg text-secondary hover:text-on-surface transition-colors" type="button">
+        Voucher
+      </button>
+<button class="flex-1 py-2 px-3 text-center rounded-lg font-label-lg text-label-lg bg-surface-container-lowest text-primary shadow-sm transition-all font-bold" type="button">
+        Voucher Pack
+      </button>
+<button class="flex-1 py-2 px-3 text-center rounded-lg font-label-lg text-label-lg text-secondary hover:text-on-surface transition-colors" type="button">
+        Benefits
+      </button>
+</div>
+</section>
+<!-- Voucher Pack Content Section -->
+<section class="mt-5 space-y-3.5">
+<!-- Informative Header Banner -->
+<div class="flex items-center gap-2.5 px-1">
+<div class="w-7 h-7 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">
+          Beli Paket Voucher, Langsung Hemat Berkali-kali
+        </h2>
+<p class="font-body-sm text-body-sm text-secondary">Nikmati diskon eksklusif untuk member setia</p>
+</div>
+</div>
+<!-- Voucher Pack Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm relative overflow-hidden transition-transform active:scale-[0.99]">
+<!-- Decorative Side Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<!-- Top Row -->
+<div class="flex items-start justify-between gap-2 pl-1.5">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Langganan Voucher Rp9.000</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1 line-clamp-2 leading-relaxed">
+            1x Voucher B1G1, 2x Voucher B2G1, 30x Voucher Diskon 10%, 30x Voucher Diskon Ongkir Rp5.000
+          </p>
+</div>
+<span class="inline-flex items-center font-label-sm text-label-sm font-bold bg-[#fff3e0] text-[#e65100] px-2.5 py-1 rounded-full shrink-0 shadow-sm">
+          65x
+        </span>
+</div>
+<!-- Price Strikethrough & Savings Tag -->
+<div class="flex items-center gap-2 mt-3 pl-1.5">
+<span class="font-body-md text-body-md line-through text-secondary">Rp630.000</span>
+<span class="font-label-sm text-label-sm font-bold bg-[#4caf50] text-on-primary px-2 py-0.5 rounded-md">
+          Save 98%
+        </span>
+</div>
+<!-- Divider / Bottom Section with Action -->
+<div class="mt-3.5 pt-3 bg-surface-container-low/40 -mx-4 -mb-4 px-4 py-3 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Harga Paket</span>
+<span class="font-headline-md text-headline-md font-bold text-[#2e7d32] leading-none">Rp9.000</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-[#8e0410] active:scale-95 text-on-primary font-label-lg text-label-lg px-5 py-2.5 rounded-lg shadow transition-all" onclick="openPackModal('Langganan Voucher Rp9.000', 'Rp9.000', '65 Voucher Hemat')" type="button">
+<span>Buy Pack</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Voucher Pack Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm relative overflow-hidden transition-transform active:scale-[0.99]">
+<!-- Decorative Side Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#ffd54f] to-[#e65100]"></div>
+<!-- Top Row -->
+<div class="flex items-start justify-between gap-2 pl-1.5">
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Langganan Voucher Rp24.000</h3>
+<span class="material-symbols-outlined text-[16px] text-[#e65100]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mt-1 line-clamp-2 leading-relaxed">
+            1x Voucher Gratis 1 Minuman, 1x Voucher B1G1, 32x Diskon 15%, 32x Diskon Ongkir Rp10.000
+          </p>
+</div>
+<span class="inline-flex items-center font-label-sm text-label-sm font-bold bg-[#fff3e0] text-[#e65100] px-2.5 py-1 rounded-full shrink-0 shadow-sm">
+          66x
+        </span>
+</div>
+<!-- Price Strikethrough & Savings Tag -->
+<div class="flex items-center gap-2 mt-3 pl-1.5">
+<span class="font-body-md text-body-md line-through text-secondary">Rp680.000</span>
+<span class="font-label-sm text-label-sm font-bold bg-[#4caf50] text-on-primary px-2 py-0.5 rounded-md">
+          Save 96%
+        </span>
+</div>
+<!-- Divider / Bottom Section with Action -->
+<div class="mt-3.5 pt-3 bg-surface-container-low/40 -mx-4 -mb-4 px-4 py-3 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider block">Harga Paket</span>
+<span class="font-headline-md text-headline-md font-bold text-[#2e7d32] leading-none">Rp24.000</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1.5 bg-primary hover:bg-[#8e0410] active:scale-95 text-on-primary font-label-lg text-label-lg px-5 py-2.5 rounded-lg shadow transition-all" onclick="openPackModal('Langganan Voucher Rp24.000', 'Rp24.000', '66 Voucher Sultan')" type="button">
+<span>Buy Pack</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Extra Delight Perk Pill -->
+<div class="bg-surface-container-low rounded-xl p-3.5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">loyalty</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Poin Loyalitas Otomatis</p>
+<p class="font-body-sm text-body-sm text-secondary">Dapatkan 50 KangenPoints tiap pembelian pack</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">chevron_right</span>
+</div>
+</section>
+<!-- Toast Notification / Instant Feedback Sheet Modal Simulator -->
+<div class="fixed inset-x-0 bottom-0 z-50 transform translate-y-full transition-transform duration-300 ease-out p-4 flex flex-col justify-end pointer-events-none" id="buy-sheet">
+<div class="bg-inverse-surface text-inverse-on-surface p-4 rounded-2xl shadow-2xl flex items-center justify-between pointer-events-auto border-0">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-[#4caf50] text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold" id="sheet-title">Voucher Pack Ditambahkan</p>
+<p class="font-body-sm text-body-sm opacity-80" id="sheet-sub">Lanjutkan ke kasir kopi</p>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold active:scale-95" onclick="closePackModal()" type="button">
+        Bayar
+      </button>
+</div>
+</div>
+</div>
+<script>
+  function openPackModal(title, price, perks) {
+    const sheet = document.getElementById('buy-sheet');
+    const titleEl = document.getElementById('sheet-title');
+    const subEl = document.getElementById('sheet-sub');
+    if (sheet && titleEl && subEl) {
+      titleEl.textContent = title + ' (' + price + ')';
+      subEl.textContent = 'Siap aktif untuk akun Davit Hengky';
+      sheet.classList.remove('translate-y-full');
+      setTimeout(() => {
+        closePackModal();
+      }, 3500);
+    }
+  }
+
+  function closePackModal() {
+    const sheet = document.getElementById('buy-sheet');
+    if (sheet) {
+      sheet.classList.add('translate-y-full');
+    }
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_16px_-2px_rgba(26,26,26,0.08)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-secondary hover:text-on-surface transition-colors" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm mt-0.5">Beranda</span></a><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-secondary hover:text-on-surface transition-colors" data-path="menu" href="#"><span class="material-symbols-outlined text-[24px]">coffee</span><span class="font-label-sm text-label-sm mt-0.5">Menu</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-14 h-14 rounded-xl transition-colors text-primary font-bold" data-path="vip" href="#"><span class="material-symbols-outlined text-[24px]">star</span><span class="font-label-sm text-label-sm mt-0.5">VIP</span></a><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-secondary hover:text-on-surface transition-colors" data-path="merch" href="#"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="font-label-sm text-label-sm mt-0.5">Merch</span></a><a class="flex flex-col items-center justify-center w-14 h-14 rounded-xl text-secondary hover:text-on-surface transition-colors" data-path="saya" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm mt-0.5">Saya</span></a></div></nav></body></html>
